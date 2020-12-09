@@ -1,0 +1,22 @@
+[
+    {
+        "Name": "AZURE",
+        "Description" : "AZURE",
+        "State" : true
+    },
+    {
+        "Name": "AWS",
+        "Description" : "AWS",
+        "State" : true
+    },
+    {
+        "Name": "LINODE",
+        "Description" : "LINODE",
+        "State" : true
+    },
+    {
+        "Name": "DIGITALOCEAN",
+        "Description" : "DIGITALOCEAN",
+        "State" : true
+    }
+]
