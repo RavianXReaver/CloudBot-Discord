@@ -27,9 +27,9 @@ namespace DiscordBot
 
         private async Task MessageReceived(SocketMessage message)
         {
-            if (message.Content == "!ping")
+            if (message.Content.StartsWith('!'))
             {
-                await message.Channel.SendMessageAsync("Pong!");
+                await message.Channel.SendMessageAsync(CommandParser.CheckCommand(message));
             }
         }
 

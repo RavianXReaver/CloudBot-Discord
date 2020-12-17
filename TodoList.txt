@@ -1,0 +1,16 @@
+**General Commands list**
+
+Set bot command prefix
+List commands
+Set authorized users based on roles
+Set channels that can be interacted with
+Wipe all configurations
+Wipe specific configurations
+
+
+**Linode Commands list**
+
+Auth to Linode - Saves Credentials on database
+Deauth - Removes Creds from database
+Grant Permissions for different user roles for different commands- by default all set to none
+start / stop instance

@@ -7,10 +7,8 @@ using Discord.WebSocket;
 
 public static class CommandParser
 {
-    private static string[] _providerList = {"AWS", "AZURE", "LINODE", "DIGITALOCEAN"};
-
-    public static void CheckCommand(Provider command)
+    public static string CheckCommand(SocketMessage message)
     {
-        
+        return "supG";
     }
 }
