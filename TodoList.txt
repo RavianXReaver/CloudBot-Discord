@@ -1,16 +1,64 @@
-**General Commands list**
+*****General Commands list*****
 
-Set bot command prefix
-List commands
-Set authorized users based on roles
-Set channels that can be interacted with
-Wipe all configurations
-Wipe specific configurations
+Note: Mentioning the bot displays the prefix.
 
+*   - <TagBot> <anycommand> - Can execute any command 
+        
+        * Can execute any command without the prefix, if no command is provided after the tag, it prints main command list to authorized users
+        * Main commands 
+            * Global help
+            * Linode help
+            * Aws help
 
-**Linode Commands list**
+    - !!!cb    global set prefix <any> - Set bot command prefix - Default !!!cb
+        * Only admin can perform this command
+
+    - <prefix> global help - by default only admin
+        
+        * Lists all the commands
+    
+    - <prefix> global prefix set
+
+    - <prefix> global authorizeduser set <user> <command> - Authorized users with global access cannot remove eachother unless they're admin.
+        * Need to be an admin to perform this in the first place
+   
+    - <prefix> global authorizedrole set <role> <command> - Authorized users with global access cannot remove eachother unless they're admin.
+
+    - <prefix> global authorizeduser list
+        * <Role>  <Command>    - Displays as   
+    
+    - <prefix> global authorizedrole list
+
+    - <prefix> global authorizeduser unset <user> <command>
+    - <prefix> global authorizedrole unset <role> <command>
+    - <prefix> global channel set <channelid>
+    - <prefix> global channel list
+    - <prefix> global channel unset <channelid>
+    - <prefix> global wipeall
+        * Default Prefix set to !!!cb
+
+*****Linode Commands list*****
 
 Auth to Linode - Saves Credentials on database
+
+    - <prefix> Linode auth <Token>
+
 Deauth - Removes Creds from database
-Grant Permissions for different user roles for different commands- by default all set to none
-start / stop instance
+
+    - <prefix> Linode deauth 
+
+Self Register 
+
+    - <prefix> Linode register Profile <name> 
+
+Registering VMs and setting Alias
+
+    - <prefix> Linode register VM <vmID> <Alias> 
+
+Grant Permissions for different users for different commands - by default all set to none
+
+    - <prefix> Linode setauthorizeduser <name/id> <vmID/Alias> 
+
+start / stop / reboot instance
+
+    - <prefix> Linode vm <name/id> <Action> 

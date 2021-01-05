@@ -6,6 +6,4 @@ COPY . ./
 
 RUN dotnet publish -c Release -o out
 
-WORKDIR /app
-
-ENTRYPOINT ["dotnet", "run", "DiscordBot.dll"]
+ENTRYPOINT ["dotnet", "run", "CloudBot.dll"]
