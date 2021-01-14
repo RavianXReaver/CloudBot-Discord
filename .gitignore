@@ -3,3 +3,4 @@ publish/
 token.txt
 .vscode/
 out/
+obj/

@@ -3,38 +3,38 @@
 Note: Mentioning the bot displays the prefix.
 
 *   - <TagBot> <anycommand> - Can execute any command 
-        
         * Can execute any command without the prefix, if no command is provided after the tag, it prints main command list to authorized users
         * Main commands 
             * Global help
             * Linode help
             * Aws help
 
-    - !!!cb    global set prefix <any> - Set bot command prefix - Default !!!cb
+    - !!!cb    global prefix set <any> - Set bot command prefix - Default !!!cb
         * Only admin can perform this command
 
-    - <prefix> global help - by default only admin
-        
+    - <prefix> global help - by default only admin, global acess users
         * Lists all the commands
-    
-    - <prefix> global prefix set
 
-    - <prefix> global authorizeduser set <user> <command> - Authorized users with global access cannot remove eachother unless they're admin.
+    - <prefix> global authuser set <user> <command> - Authorized users with global access cannot grant access to global command unless they're admin.
         * Need to be an admin to perform this in the first place
    
-    - <prefix> global authorizedrole set <role> <command> - Authorized users with global access cannot remove eachother unless they're admin.
+    - <prefix> global authrole set <role> <command> - Authorized users with global access cannot grant access to global command unless they're admin.
+        * Need to be an admin to perform this in the first place
 
-    - <prefix> global authorizeduser list
+    - <prefix> global authrole list
+        * <Role>  <Command>    - Displays as   
+
+    - <prefix> global authuser list
         * <Role>  <Command>    - Displays as   
     
-    - <prefix> global authorizedrole list
+    - <prefix> global authrole list
 
-    - <prefix> global authorizeduser unset <user> <command>
-    - <prefix> global authorizedrole unset <role> <command>
+    - <prefix> global authuser unset <user> <command> - Authorized users with global access cannot remove global command unless they're admin.
+    - <prefix> global authrole unset <role> <command> - Authorized users with global access cannot remove global command unless they're admin.
     - <prefix> global channel set <channelid>
     - <prefix> global channel list
     - <prefix> global channel unset <channelid>
-    - <prefix> global wipeall
+    - <prefix> global wipeall - only admins can perform this
         * Default Prefix set to !!!cb
 
 *****Linode Commands list*****
@@ -55,9 +55,13 @@ Registering VMs and setting Alias
 
     - <prefix> Linode register VM <vmID> <Alias> 
 
-Grant Permissions for different users for different commands - by default all set to none
+Grant Permissions for different users for different commands - by default all set to none - only people with global and admin access
 
-    - <prefix> Linode setauthorizeduser <name/id> <vmID/Alias> 
+    - <prefix> Linode authouser <name/id> <vmID/Alias> 
+
+Grant Permissions for different users for different commands - by default all set to none - only people with global and admin access
+
+    - <prefix> Linode authorole <name/id> <vmID/Alias> 
 
 start / stop / reboot instance
 
